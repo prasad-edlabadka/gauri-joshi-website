@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#184334" />
+  <rect x="10" y="10" width="100" height="100" rx="18" fill="#F6F8F5" />
+  <!-- Teal Medical Cross -->
+  <path d="M47 22H67V44H89V64H67V88H47V64H25V44H47V22Z" fill="#0B7A8E" />
+  <!-- White subtle outline around leaf -->
+  <path d="M52 72C53 50 70 38 96 40C93 64 78 75 52 72Z" fill="#F6F8F5" stroke="#F6F8F5" stroke-width="5" stroke-linejoin="round" />
+  <!-- Olive / Sage Leaf curving over cross -->
+  <path d="M51 74C52 51 69 39 95 41C91 64 76 74 51 74Z" fill="#8BA84E" />
+  <!-- Leaf vein -->
+  <path d="M51 74C63 60 76 50 93 43" stroke="#536B28" stroke-width="3" stroke-linecap="round" />
+  <!-- Stem curve -->
+  <path d="M51 74C49 80 48 85 48 88" stroke="#536B28" stroke-width="3.5" stroke-linecap="round" />
+</svg>
+
