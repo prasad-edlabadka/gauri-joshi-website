@@ -244,17 +244,17 @@ export function DoctorPortraitFrame({
         </div>
       </div>
 
-      {/* Floating badge Left: Signboard 5 Pillars */}
-      <div className="floating-credential-card floating-card-top">
+      {/* Clean anchored trust card below the portrait (in-flow, never overlapping photo or banner) */}
+      <div className="portrait-footer-trust-card">
         <div className="floating-icon-box teal">
           <ShieldCheck size={20} />
         </div>
         <div>
-          <strong>{lang === 'mr' ? '१००% नैसर्गिक व सुरक्षित' : 'Safe & Root-Cause Healing'}</strong>
+          <strong>{lang === 'mr' ? '१००% नैसर्गिक व सुरक्षित उपचार' : 'Safe & Root-Cause Healing'}</strong>
           <span>
             {lang === 'mr'
-              ? 'कोणतेही दुष्परिणाम नाहीत'
-              : 'Gentle, individualized remedies'}
+              ? 'कोणतेही दुष्परिणाम नाहीत • शास्त्रीय होमिओपॅथी'
+              : 'Gentle, individualized remedies with zero drowsiness or side effects'}
           </span>
         </div>
       </div>
