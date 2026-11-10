@@ -3173,8 +3173,8 @@ a {
 /* Grids */
 .reels-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .reels-embed-grid {
@@ -3242,11 +3242,12 @@ a {
 .reel-overlay-scrim {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
-    rgba(12, 34, 26, 0.35) 0%,
-    rgba(12, 34, 26, 0.08) 45%,
-    rgba(12, 34, 26, 0.88) 100%
+    rgba(12, 34, 26, 0.5) 0%,
+    rgba(12, 34, 26, 0.16) 44%,
+    rgba(12, 34, 26, 0.92) 100%
   );
 }
 
@@ -3254,6 +3255,7 @@ a {
   position: absolute;
   top: 16px;
   left: 16px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -3298,6 +3300,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   padding: 20px;
   color: #ffffff;
 }
@@ -3318,32 +3321,69 @@ a {
   color: var(--color-signboard-lime);
 }
 
-/* Curated Showcase Vertical Reel Cards (9:14 aspect) */
+/* Curated Showcase Vertical Reel Cards (Real Cover Thumbnail + Clean Info Body) */
 .reel-showcase-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  aspect-ratio: 9 / 13;
-  min-height: 390px;
   border-radius: var(--radius-xl);
-  padding: 22px;
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-med), box-shadow var(--transition-med);
 }
 
-.reel-showcase-card.accent-teal {
-  background: linear-gradient(155deg, #1b5046 0%, #2f7d80 55%, #12372a 100%);
+.reel-poster-btn {
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  width: 100%;
+  padding: 0;
 }
 
-.reel-showcase-card.accent-sage {
-  background: linear-gradient(155deg, #214e3a 0%, #4e8c6b 55%, #143326 100%);
+.reel-thumb-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 184 / 256;
+  background: #12372a;
+  overflow: hidden;
 }
 
-.reel-showcase-card.accent-sky {
-  background: linear-gradient(155deg, #1a4b5c 0%, #3d8fb8 55%, #123340 100%);
+.reel-showcase-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.45s ease;
+}
+
+.reel-showcase-card:hover .reel-showcase-img {
+  transform: scale(1.04);
+}
+
+.reel-thumb-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 26, 20, 0.14) 0%,
+    rgba(10, 26, 20, 0.04) 55%,
+    rgba(10, 26, 20, 0.28) 100%
+  );
+  transition: background var(--transition-fast);
+}
+
+.reel-showcase-card:hover .reel-thumb-vignette {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 26, 20, 0.22) 0%,
+    rgba(10, 26, 20, 0.1) 55%,
+    rgba(10, 26, 20, 0.36) 100%
+  );
 }
 
 .reel-showcase-card:hover {
@@ -3352,56 +3392,78 @@ a {
 }
 
 .reel-showcase-card:hover .reel-play-circle {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.reel-showcase-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.reel-topic-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(6px);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  transform: scale(1.1);
+  background: rgba(18, 55, 42, 0.78);
 }
 
 .reel-duration-chip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   font-size: 0.7rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  background: rgba(12, 34, 26, 0.72);
+  backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.reel-showcase-center {
+.reel-center-play {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.reel-showcase-card .reel-play-circle {
+  width: 52px;
+  height: 52px;
+  background: rgba(18, 55, 42, 0.56);
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.reel-card-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-  margin: auto 0;
+  flex: 1;
+  padding: 16px;
+  gap: 8px;
+  background: #ffffff;
+}
+
+.reel-topic-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-teal-dark);
+  background: var(--color-teal-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
 }
 
 .reel-showcase-title {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  line-height: 1.25;
-  color: #ffffff;
+  line-height: 1.32;
+  color: var(--color-primary-dark);
 }
 
 .reel-showcase-caption {
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-bottom: auto;
 }
 
 .reel-showcase-footer {
@@ -3409,13 +3471,14 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.78rem;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #eef3f0;
+  font-size: 0.74rem;
 }
 
 .reel-handle-mini {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--color-text-muted);
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3425,26 +3488,21 @@ a {
 .reel-watch-cta {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   font-weight: 700;
-  color: #ffffff;
+  color: #be185d;
   white-space: nowrap;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1080px) {
   .reels-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   .reels-grid {
     grid-template-columns: 1fr;
-  }
-
-  .reel-showcase-card {
-    aspect-ratio: auto;
-    min-height: 300px;
   }
 
   .ig-profile-banner {

@@ -33,7 +33,7 @@ export const CLINIC_CONFIG = {
     beholdFeedId: '', // e.g. 'AbCdEf123456'
     featuredReels: [
       // Paste real Reel URLs from @homoeo_care_by_dr_gauri_joshi here to embed live video players:
-      // { url: 'https://www.instagram.com/reel/SHORTCODE_1/', title: 'Acupressure for Neck & Migraine' },
+      // { url: 'https://www.instagram.com/reel/SHORTCODE_1/', title: 'Acupressure for Neck & Migraine', thumbnail: '/images/acupressure.jpg' },
     ],
   },
 
@@ -533,30 +533,47 @@ export const CONTENT = {
       placeholderCards: [
         {
           id: 'reel-1',
-          topic: 'Homoeopathy & Immunity',
-          title: 'Root-Cause Healing for Kids & Recurring Allergies',
+          topic: 'Mental Wellness • Burnout',
+          title: 'Career Success Achieved… Yet Where Is the Joy?',
           caption:
-            'How gentle constitutional homoeopathy builds natural immunity without frequent antibiotics or daytime drowsiness.',
-          duration: 'Reel • Health Tip',
+            'Why high-performing IT professionals feel empty despite success, and how holistic care restores calm.',
+          duration: 'Reel • Episode',
           accent: 'teal',
+          thumbnail: '/images/reels/reel-career-joy.jpg',
+          thumbnailPosition: 'center top',
         },
         {
           id: 'reel-2',
-          topic: 'Acupressure & Pain Relief',
-          title: 'Quick Desk-Life Relief for Neck, Back & Migraines',
+          topic: 'Relationships • Counseling',
+          title: 'Is the Fault in the Relationship—or in the Mind?',
           caption:
-            'Simple meridian & acupressure insights for IT professionals dealing with tech-neck, stiffness, and stress headaches.',
-          duration: 'Reel • Pain Care',
+            'Understanding overthinking, emotional stress, and unspoken expectations in everyday relationships.',
+          duration: 'Reel • Counseling',
           accent: 'sage',
+          thumbnail: '/images/reels/reel-relationships-mind.jpg',
+          thumbnailPosition: 'center top',
         },
         {
           id: 'reel-3',
-          topic: 'Counseling & Nutrition',
-          title: 'Mind-Body Harmony: Sleep, PCOD & Gut Health',
+          topic: "Men's Mental Health",
+          title: '"I Am Fine"... But Are You Really?',
           caption:
-            'Why emotional calm and home-cooked clinical nutrition work together to balance hormones and energy.',
-          duration: 'Reel • Mind & Gut',
+            "Dr. Gauri Joshi addresses men's unspoken emotional struggles, burnout, and safe psychological support.",
+          duration: 'Reel • Mind Care',
           accent: 'sky',
+          thumbnail: '/images/reels/reel-i-am-fine.jpg',
+          thumbnailPosition: 'center top',
+        },
+        {
+          id: 'reel-4',
+          topic: 'Episode 2 • Silent Stress',
+          title: "Just Because He's Quiet, Doesn't Mean He's Fine",
+          caption:
+            'Recognizing silent stress early and supporting healing with counseling and gentle homoeopathy.',
+          duration: 'Reel • Episode 2',
+          accent: 'teal',
+          thumbnail: '/images/reels/reel-quiet-episode2.jpg',
+          thumbnailPosition: 'center top',
         },
       ],
     },
@@ -1077,30 +1094,47 @@ export const CONTENT = {
       placeholderCards: [
         {
           id: 'reel-1',
-          topic: 'होमिओपॅथी व प्रतिकारशक्ती',
-          title: 'लहान मुलांची प्रतिकारशक्ती व वारंवार होणारी सर्दी-ॲलर्जी',
+          topic: 'मानसिक आरोग्य • तणाव',
+          title: 'करिअरमध्ये सगळं मिळवलं.. पण आनंद कुठे आहे??',
           caption:
-            'वारंवार अँटीबायोटिक्स न घेता सौम्य होमिओपॅथिक औषधांनी मुलांची प्रतिकारशक्ती मुळापासून कशी वाढते.',
-          duration: 'रील • आरोग्य टिप',
+            'यश मिळूनही मन का अस्वस्थ राहते? कार्यक्षेत्रातील ताण आणि मानसिक संतुलनावर मार्गदर्शन.',
+          duration: 'रील • संवाद',
           accent: 'teal',
+          thumbnail: '/images/reels/reel-career-joy.jpg',
+          thumbnailPosition: 'center top',
         },
         {
           id: 'reel-2',
-          topic: 'ॲक्युप्रेशर व वेदनामुक्ती',
-          title: 'लॅपटॉपमुळे होणारी मानदुखी, पाठदुखी आणि मायग्रेनवर उपाय',
+          topic: 'नातेसंबंध • समुपदेशन',
+          title: 'नात्यात चूक आहे की मनात??',
           caption:
-            'तासनतास बसून काम करणाऱ्यांसाठी ॲक्युप्रेशर आणि मर्म बिंदूंद्वारे नैसर्गिक वेदनामुक्तीची माहिती.',
-          duration: 'रील • वेदनामुक्ती',
+            'अतिविचार, गैरसमज आणि भावनिक ताण यांचा नातेसंबंधांवर होणारा परिणाम आणि उपाय.',
+          duration: 'रील • समुपदेशन',
           accent: 'sage',
+          thumbnail: '/images/reels/reel-relationships-mind.jpg',
+          thumbnailPosition: 'center top',
         },
         {
           id: 'reel-3',
-          topic: 'समुपदेशन व आहारशास्त्र',
-          title: 'मन-शरीर संतुलन: शांत झोप, PCOD आणि पचन आरोग्य',
+          topic: 'पुरुषांचे मानसिक आरोग्य',
+          title: '"I Am Fine"... पण मनातून खरोखर ठीक आहात का?',
           caption:
-            'मानसिक शांतता आणि घरगुती चौरस आहार एकत्रितपणे हार्मोन्स व पचन कसे सुधारतात.',
-          duration: 'रील • मन व आहार',
+            'न बोललेला ताण, जबाबदाऱ्यांचे दडपण आणि मानसिक आधाराची गरज यावर डॉ. गौरी जोशींचे मार्गदर्शन.',
+          duration: 'रील • मन आरोग्य',
           accent: 'sky',
+          thumbnail: '/images/reels/reel-i-am-fine.jpg',
+          thumbnailPosition: 'center top',
+        },
+        {
+          id: 'reel-4',
+          topic: 'एपिसोड २ • शांत तणाव',
+          title: 'तो शांत आहे म्हणजे सगळं ठीक आहे असं नाही',
+          caption:
+            'शांत स्वभावामागे लपलेला ताण ओळखणे आणि समुपदेशन व होमिओपॅथीने मानसिक शांतता मिळवणे.',
+          duration: 'रील • एपिसोड २',
+          accent: 'teal',
+          thumbnail: '/images/reels/reel-quiet-episode2.jpg',
+          thumbnailPosition: 'center top',
         },
       ],
     },
