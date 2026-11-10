@@ -29,11 +29,13 @@ import {
   Mail,
   Globe2,
   QrCode,
+  Instagram,
 } from 'lucide-react';
 import { CLINIC_CONFIG, CONTENT } from './data/clinicData';
 import { ClinicLogo } from './components/ClinicLogo';
 import { DoctorPortraitFrame } from './components/DoctorPortraitFrame';
 import { LeafDecor } from './components/LeafDecor';
+import { InstagramReelsSection } from './components/InstagramReelsSection';
 
 const ICON_MAP = {
   Sparkles,
@@ -195,6 +197,9 @@ export function App() {
               <span>{t.nav.itWellness}</span>
               <span className="nav-micro-tag">IT Care</span>
             </a>
+            <a href="#reels" className="nav-link">
+              {t.nav.reels}
+            </a>
             <a href="#services" className="nav-link">
               {t.nav.services}
             </a>
@@ -250,6 +255,13 @@ export function App() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 💻 {t.nav.itWellness}
+              </a>
+              <a
+                href="#reels"
+                className="mobile-nav-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.reels}
               </a>
               <a
                 href="#services"
@@ -436,6 +448,13 @@ export function App() {
             </div>
           </div>
         </section>
+
+        {/* INSTAGRAM REELS & WELLNESS TIPS (FEATURED HIGH-VISIBILITY PLACEMENT) */}
+        <InstagramReelsSection
+          instagramConfig={CLINIC_CONFIG.instagram}
+          copy={t.reelsSection}
+          lang={lang}
+        />
 
         {/* NEW: IT & DESK-LIFE WELLNESS BENTO SECTION (RAHATANI / WAKAD / HINJEWADI) */}
         <section id="it-wellness" className="section it-bento-section">
@@ -1099,6 +1118,16 @@ export function App() {
                     <span>{t.contactSection.openMapsBtn}</span>
                     <ExternalLink size={14} />
                   </a>
+                  <a
+                    href={CLINIC_CONFIG.instagram.reelsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="direct-contact-pill maps-pill"
+                  >
+                    <Instagram size={18} />
+                    <span>@{CLINIC_CONFIG.instagram.handle}</span>
+                    <ExternalLink size={14} />
+                  </a>
                 </div>
 
                 <div className="clinic-qr-row">
@@ -1150,6 +1179,13 @@ export function App() {
               </a>
               <a href={`mailto:${CLINIC_CONFIG.email}`}>
                 <Mail size={14} /> {CLINIC_CONFIG.email}
+              </a>
+              <a
+                href={CLINIC_CONFIG.instagram.profileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={14} /> @{CLINIC_CONFIG.instagram.handle}
               </a>
               <span>
                 <MapPin size={14} /> {locInfo.addressLine1}, {locInfo.addressLine2}

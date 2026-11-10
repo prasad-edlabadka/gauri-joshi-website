@@ -42,3 +42,10 @@ npm run build
 
 ## 📷 How to Add Dr. Gauri's Personal Photo
 Place her photo in `public/doctor-photo.jpg`. The site will automatically display it inside the framed portrait card on the homepage, replacing the artistic placeholder silhouette.
+
+---
+
+## 🎬 Instagram Reels Integration (`@homoeo_care_by_dr_gauri_joshi`)
+Edit `CLINIC_CONFIG.instagram` in `src/data/clinicData.js`:
+- **Option A — Auto-sync latest Reels**: Connect `@homoeo_care_by_dr_gauri_joshi` on [Behold](https://behold.so) and paste the Feed ID into `beholdFeedId`.
+- **Option B — Embed specific Reels**: Paste Reel URLs into `featuredReels` (for example `https://www.instagram.com/reel/<SHORTCODE>/`) to render official Instagram Reel players directly on the site.

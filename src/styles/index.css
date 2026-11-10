@@ -3062,3 +3062,392 @@ a {
     text-align: center;
   }
 }
+
+
+/* ==========================================================================
+   INSTAGRAM REELS & WELLNESS VIDEO TIPS SECTION
+   ========================================================================== */
+.reels-section {
+  background-color: #ffffff;
+}
+
+.section-eyebrow.ig-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fff7ed 100%);
+  color: #be185d;
+  border: 1px solid rgba(190, 24, 93, 0.2);
+}
+
+/* Profile Header Banner */
+.ig-profile-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: linear-gradient(135deg, #f5f9f8 0%, #edf6f3 100%);
+  border: 1px solid #d5e5df;
+  border-radius: var(--radius-xl);
+  padding: 20px 26px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.ig-profile-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ig-avatar-ring {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ig-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ig-handle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ig-handle-row strong {
+  font-size: 1.05rem;
+  color: var(--color-primary-dark);
+}
+
+.ig-verified-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-teal-dark);
+  background: var(--color-teal-light);
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+}
+
+.ig-profile-bio {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+}
+
+.ig-follow-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 55%, #bc1888 100%);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ig-follow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(220, 39, 67, 0.35);
+}
+
+/* Grids */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reels-embed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Direct Instagram Iframe Cards */
+.reel-iframe-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 9 / 15;
+  min-height: 480px;
+}
+
+.reel-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Live Behold Feed Cards */
+.reel-live-card {
+  display: block;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.reel-live-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.reel-media-wrap {
+  position: relative;
+  aspect-ratio: 9 / 14;
+  background: #12372a;
+  overflow: hidden;
+}
+
+.reel-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.reel-live-card:hover .reel-media-wrap img {
+  transform: scale(1.04);
+}
+
+.reel-fallback-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(155deg, #184334 0%, #459a9d 100%);
+}
+
+.reel-overlay-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 34, 26, 0.35) 0%,
+    rgba(12, 34, 26, 0.08) 45%,
+    rgba(12, 34, 26, 0.88) 100%
+  );
+}
+
+.reel-top-pill {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.reel-play-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.reel-live-card .reel-play-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reel-live-card:hover .reel-play-circle {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reel-bottom-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.reel-bottom-caption p {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  color: #eef5f2;
+}
+
+.reel-watch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-signboard-lime);
+}
+
+/* Curated Showcase Vertical Reel Cards (9:14 aspect) */
+.reel-showcase-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 9 / 13;
+  min-height: 390px;
+  border-radius: var(--radius-xl);
+  padding: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-med), box-shadow var(--transition-med);
+}
+
+.reel-showcase-card.accent-teal {
+  background: linear-gradient(155deg, #1b5046 0%, #2f7d80 55%, #12372a 100%);
+}
+
+.reel-showcase-card.accent-sage {
+  background: linear-gradient(155deg, #214e3a 0%, #4e8c6b 55%, #143326 100%);
+}
+
+.reel-showcase-card.accent-sky {
+  background: linear-gradient(155deg, #1a4b5c 0%, #3d8fb8 55%, #123340 100%);
+}
+
+.reel-showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.reel-showcase-card:hover .reel-play-circle {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reel-showcase-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.reel-topic-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.reel-duration-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.reel-showcase-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin: auto 0;
+}
+
+.reel-showcase-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.reel-showcase-caption {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.reel-showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+}
+
+.reel-handle-mini {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reel-watch-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .reels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reel-showcase-card {
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  .ig-profile-banner {
+    padding: 18px;
+  }
+}

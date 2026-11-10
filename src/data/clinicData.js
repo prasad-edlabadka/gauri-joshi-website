@@ -21,6 +21,22 @@ export const CLINIC_CONFIG = {
   // 3. Google Maps Location Link (Rahatani, Pune)
   googleMapsUrl: 'https://maps.google.com/?q=Veer+Arcade+Kokane+Chowk+Rahatani+Pune+411017',
 
+  // 3b. Instagram Reels Integration (@homoeo_care_by_dr_gauri_joshi)
+  //     Option A (Auto-sync latest reels): Create a free feed at https://behold.so
+  //       for @homoeo_care_by_dr_gauri_joshi and paste the Feed ID below.
+  //     Option B (Direct Reel Embeds): Paste any Reel URLs into `featuredReels`
+  //       (e.g. 'https://www.instagram.com/reel/SHORTCODE/').
+  instagram: {
+    handle: 'homoeo_care_by_dr_gauri_joshi',
+    profileUrl: 'https://www.instagram.com/homoeo_care_by_dr_gauri_joshi/',
+    reelsUrl: 'https://www.instagram.com/homoeo_care_by_dr_gauri_joshi/reels/',
+    beholdFeedId: '', // e.g. 'AbCdEf123456'
+    featuredReels: [
+      // Paste real Reel URLs from @homoeo_care_by_dr_gauri_joshi here to embed live video players:
+      // { url: 'https://www.instagram.com/reel/SHORTCODE_1/', title: 'Acupressure for Neck & Migraine' },
+    ],
+  },
+
   // 4. Doctor Qualifications & Experience (Bilingual)
   doctorCredentials: {
     en: {
@@ -79,6 +95,7 @@ export const CONTENT = {
       conditions: 'Symptom Guide',
       about: 'Dr. Gauri',
       stories: 'Reviews',
+      reels: 'Reels',
       faq: 'FAQ',
       contact: 'Book Slot',
       switchLangLabel: 'मराठी',
@@ -505,6 +522,44 @@ export const CONTENT = {
         },
       ],
     },
+    reelsSection: {
+      eyebrow: 'WATCH & LEARN • @HOMOEO_CARE_BY_DR_GAURI_JOSHI',
+      title: 'Latest Wellness Reels & Health Tips',
+      subtitle:
+        'Short, practical videos from Dr. Gauri Joshi on homoeopathy, acupressure pain relief, counseling, and clinical nutrition.',
+      followBtn: 'Follow & Watch All Reels',
+      watchOnIgBtn: 'Watch Reel on Instagram',
+      profileBio: 'Homoeopathy • Acupressure • Counseling • Nutrition • Rahatani, Pune',
+      placeholderCards: [
+        {
+          id: 'reel-1',
+          topic: 'Homoeopathy & Immunity',
+          title: 'Root-Cause Healing for Kids & Recurring Allergies',
+          caption:
+            'How gentle constitutional homoeopathy builds natural immunity without frequent antibiotics or daytime drowsiness.',
+          duration: 'Reel • Health Tip',
+          accent: 'teal',
+        },
+        {
+          id: 'reel-2',
+          topic: 'Acupressure & Pain Relief',
+          title: 'Quick Desk-Life Relief for Neck, Back & Migraines',
+          caption:
+            'Simple meridian & acupressure insights for IT professionals dealing with tech-neck, stiffness, and stress headaches.',
+          duration: 'Reel • Pain Care',
+          accent: 'sage',
+        },
+        {
+          id: 'reel-3',
+          topic: 'Counseling & Nutrition',
+          title: 'Mind-Body Harmony: Sleep, PCOD & Gut Health',
+          caption:
+            'Why emotional calm and home-cooked clinical nutrition work together to balance hormones and energy.',
+          duration: 'Reel • Mind & Gut',
+          accent: 'sky',
+        },
+      ],
+    },
     faqSection: {
       eyebrow: 'CLEAR ANSWERS',
       title: 'Frequently Asked Questions',
@@ -585,6 +640,7 @@ export const CONTENT = {
       conditions: 'आजार व उपचार',
       about: 'डॉ. गौरी जोशी',
       stories: 'अभिप्राय',
+      reels: 'रील्स',
       faq: 'शंका समाधान',
       contact: 'अपॉइंटमेंट घ्या',
       switchLangLabel: 'English',
@@ -1007,6 +1063,44 @@ export const CONTENT = {
           url: 'https://www.google.com/maps/contrib/109596704245797289874/reviews?hl=en-IN',
           quote:
             'गेल्या २-३ वर्षांपासून मी माझ्या मुलीसाठी तसेच स्वतःसाठीही डॉ. गौरी यांच्याकडून औषधे घेत आहे. त्या आजाराच्या मूळ कारणावर काम करून तो मुळापासून बरा करतात. गेल्या ३ वर्षांत माझ्या मुलीची प्रतिकारशक्ती इतकी सुधारली आहे की ती आता क्वचितच आजारी पडते. डॉ. गौरी यांनी तिच्या लक्षणांचे मूळ शोधून ते पूर्णपणे बरे केले. त्या अत्यंत कुशल व विश्वासू डॉक्टर आहेत. मी नक्की शिफारस करेन.',
+        },
+      ],
+    },
+    reelsSection: {
+      eyebrow: 'आरोग्य व्हिडिओ व टिप्स • @HOMOEO_CARE_BY_DR_GAURI_JOSHI',
+      title: 'ताज्या आरोग्य रील्स आणि मार्गदर्शन',
+      subtitle:
+        'डॉ. गौरी जोशी यांच्याकडून होमिओपॅथी, ॲक्युप्रेशर वेदनामुक्ती, समुपदेशन आणि क्लिनिकल न्यूट्रिशनबद्दल सोपे व उपयुक्त व्हिडिओ.',
+      followBtn: 'इंस्टाग्रामवर सर्व रील्स पहा',
+      watchOnIgBtn: 'इंस्टाग्रामवर रील पहा',
+      profileBio: 'होमिओपॅथी • ॲक्युप्रेशर • समुपदेशन • आहारशास्त्र • रहाटणी, पुणे',
+      placeholderCards: [
+        {
+          id: 'reel-1',
+          topic: 'होमिओपॅथी व प्रतिकारशक्ती',
+          title: 'लहान मुलांची प्रतिकारशक्ती व वारंवार होणारी सर्दी-ॲलर्जी',
+          caption:
+            'वारंवार अँटीबायोटिक्स न घेता सौम्य होमिओपॅथिक औषधांनी मुलांची प्रतिकारशक्ती मुळापासून कशी वाढते.',
+          duration: 'रील • आरोग्य टिप',
+          accent: 'teal',
+        },
+        {
+          id: 'reel-2',
+          topic: 'ॲक्युप्रेशर व वेदनामुक्ती',
+          title: 'लॅपटॉपमुळे होणारी मानदुखी, पाठदुखी आणि मायग्रेनवर उपाय',
+          caption:
+            'तासनतास बसून काम करणाऱ्यांसाठी ॲक्युप्रेशर आणि मर्म बिंदूंद्वारे नैसर्गिक वेदनामुक्तीची माहिती.',
+          duration: 'रील • वेदनामुक्ती',
+          accent: 'sage',
+        },
+        {
+          id: 'reel-3',
+          topic: 'समुपदेशन व आहारशास्त्र',
+          title: 'मन-शरीर संतुलन: शांत झोप, PCOD आणि पचन आरोग्य',
+          caption:
+            'मानसिक शांतता आणि घरगुती चौरस आहार एकत्रितपणे हार्मोन्स व पचन कसे सुधारतात.',
+          duration: 'रील • मन व आहार',
+          accent: 'sky',
         },
       ],
     },
