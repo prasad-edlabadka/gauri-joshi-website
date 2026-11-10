@@ -19,7 +19,7 @@ export const CLINIC_CONFIG = {
   tagline: 'Pure Care, Pure Cure',
 
   // 3. Google Maps Location Link (Rahatani, Pune)
-  googleMapsUrl: 'https://maps.google.com/?q=Veer+Arcade+Kokane+Chowk+Rahatani+Pune+411017',
+  googleMapsUrl: 'https://maps.app.goo.gl/EFaHtubeBqgUEo4f7',
 
   // 3b. Instagram Reels Integration (@homoeo_care_by_dr_gauri_joshi)
   //     Option A (Auto-sync latest reels): Create a free feed at https://behold.so

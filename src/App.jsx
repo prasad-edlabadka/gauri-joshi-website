@@ -81,6 +81,10 @@ export function App() {
       // ignore storage error
     }
     document.documentElement.lang = lang;
+    document.title =
+      lang === 'mr'
+        ? 'डॉ. गौरी जोशी यांचे होमिओ केयर | होमिओपॅथी व ॲक्युपंक्चर, रहाटणी पुणे'
+        : "Dr. Gauri Joshi's Homoeo Care | Homeopathy & Acupuncture in Rahatani, Pune";
   }, [lang]);
 
   useEffect(() => {
@@ -1131,12 +1135,19 @@ export function App() {
                 </div>
 
                 <div className="clinic-qr-row">
-                  <img
-                    src="/images/qr-location.png"
-                    alt="QR code for clinic location map"
-                    className="clinic-qr-img"
-                    loading="lazy"
-                  />
+                  <a
+                    href={CLINIC_CONFIG.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t.contactSection.openMapsBtn}
+                  >
+                    <img
+                      src="/images/qr-location.png"
+                      alt="QR code for clinic directions on Google Maps"
+                      className="clinic-qr-img"
+                      loading="lazy"
+                    />
+                  </a>
                   <div>
                     <h4>
                       <QrCode size={16} />
@@ -1187,9 +1198,13 @@ export function App() {
               >
                 <Instagram size={14} /> @{CLINIC_CONFIG.instagram.handle}
               </a>
-              <span>
+              <a
+                href={CLINIC_CONFIG.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MapPin size={14} /> {locInfo.addressLine1}, {locInfo.addressLine2}
-              </span>
+              </a>
             </div>
           </div>
 
