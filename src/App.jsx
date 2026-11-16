@@ -36,6 +36,20 @@ import { ClinicLogo } from './components/ClinicLogo';
 import { DoctorPortraitFrame } from './components/DoctorPortraitFrame';
 import { LeafDecor } from './components/LeafDecor';
 import { InstagramReelsSection } from './components/InstagramReelsSection';
+import { useSectionTracking } from './hooks/useSectionTracking';
+
+const TRACKED_SECTIONS = [
+  'home',
+  'reels',
+  'it-wellness',
+  'services',
+  'conditions',
+  'about',
+  'journey',
+  'stories',
+  'faq',
+  'contact',
+];
 
 const ICON_MAP = {
   Sparkles,
@@ -49,6 +63,8 @@ const ICON_MAP = {
 };
 
 export function App() {
+  useSectionTracking(TRACKED_SECTIONS);
+
   const [lang, setLang] = useState(() => {
     try {
       return localStorage.getItem('gj_clinic_lang') || 'en';
